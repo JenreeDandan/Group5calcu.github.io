@@ -1,57 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-    Box-sizing: border-box;
+    box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-body{
+
+body {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #e0e0e0;
+    background: rgb(2,0,36);
+    background: linear-gradient(126deg, rgb(247, 174, 237) 0%, rgb(127, 127, 180) 27%, rgb(118, 141, 241) 77%, rgb(241, 241, 241) 100%);
+    padding: 20px; 
 }
+
 .container {
     position: relative;
     max-width: 300px;
     width: 100%;
-    border-radius: 12px;
+    border-radius: 20px;
     padding: 10px 20px 20px;
     background: #fff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0,05);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px) saturate(121%);
+    -webkit-backdrop-filter: blur(10px) saturate(121%);
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    background-color: rgba(17, 25, 40, 0.79);
 }
-.buttons{
+
+.buttons {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(4, 1fr);
 }
-.display{
-    height: 80px;
+
+.display {
+    height: 70px;
     width: 100%;
     outline: none;
     border: none;
     text-align: right;
     margin-bottom: 10px;
-    font-size: 25px;
-    color: #000e1a;
+    background-color: rgba(255, 222, 173, 0);
+    font-size: 30px;
+    color: #e3e7eb;
+    font-weight: bold;
+    padding-top: 0%;
+    padding-bottom: 35px;
 }
 
 .buttons button {
     padding: 10px;
-    border-radius: 6px;
+    border-radius: 8px;
     border: none;
     font-size: 20px;
-    background-color: #eee;
+    background-color: #e6cdcd33;
+    backdrop-filter: blur(110px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
-.buttons button :active{
+.history {
+    height: 50px;
+    width: 100%;
+    outline: none;
+    border: none;
+    text-align: right;
+    margin-bottom: 10px;
+    background-color: rgba(255, 222, 173, 0);
+    font-size: 15px;
+    color: #e3e7eb;
+    font-weight: bold;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.buttons button:active {
     transform: scale(0.99);
 }
 
 .operator {
-    color: #2f9fff;
+    color: rgb(161, 238, 84);
+    background-color: aqua;
+}
 
+/* Media queries for smaller screens */
+@media (max-width: 600px) {
+    .display {
+        font-size: 20px;
+        height: 60px;
+    }
+
+    .buttons button {
+        font-size: 18px;
+        padding: 8px;
+    }
 }
